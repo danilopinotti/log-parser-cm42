@@ -22,9 +22,14 @@ class LogParser
         return new self($filePath);
     }
 
-    public function parse(): array
+    public function parse()
     {
-        return [];
+        $handle = fopen($this->logPath, 'r');
+
+        $firstLine = fgets($handle);
+
+        fclose($handle);
+        return $firstLine;
     }
 
     public function parseJson(): string
