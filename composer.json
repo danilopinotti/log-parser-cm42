@@ -31,6 +31,9 @@
       "Tests\\": "tests/"
     }
   },
+  "scripts": {
+    "test": "phpunit"
+  },
   "config": {
     "optimize-autoloader": true,
     "preferred-install": "dist",
