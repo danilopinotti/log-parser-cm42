@@ -1,0 +1,43 @@
+{
+  "name": "danilopinotti/log-parser-cm42",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Danilo Pinotti",
+      "email": "danilopinotti@hotmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.4|^8.0",
+    "ext-json": "*",
+    "spatie/regex": "^1.4"
+  },
+  "require-dev": {
+    "mockery/mockery": "^1.3.1",
+    "phpunit/phpunit": "^9.5",
+    "symfony/var-dumper": "^5.3"
+  },
+  "autoload": {
+    "files": [
+      "src/Support/helpers.php"
+    ],
+    "psr-4": {
+      "LogParser\\": "src/LogParser/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "prefer-stable": true
+}
